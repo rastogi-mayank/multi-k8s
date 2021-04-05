@@ -1,10 +1,6 @@
-docker build -t mayankrastogi94/multi-client:latest -t mayankrastogi94/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t mayankrastogi94/multi-server:latest -t mayankrastogi94/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t mayankrastogi94/multi-worker:latest -t mayankrastogi94/multi-worker:$SHA -f ./worker/Dockerfile ./worker
-
-docker push mayankrastogi94/multi-client:latest
-docker push mayankrastogi94/multi-server:latest
-docker push mayankrastogi94/multi-worker:latest
+docker build -t mayankrastogi94/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t mayankrastogi94/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t mayankrastogi94/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push mayankrastogi94/multi-client:$SHA
 docker push mayankrastogi94/multi-server:$SHA
