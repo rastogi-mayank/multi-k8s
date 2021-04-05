@@ -1,3 +1,4 @@
+echo $(git rev-parse HEAD)
 docker build -t mayankrastogi94/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t mayankrastogi94/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t mayankrastogi94/multi-worker:$SHA -f ./worker/Dockerfile ./worker
